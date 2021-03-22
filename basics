@@ -11,4 +11,9 @@ unzip file----------------to unzip file
 we need to copy the website files into /var/www/html
 cpu,memory,disk-------------------------ec2 comes with
 
+Elstic ip
+--------------------------------
+if it not connected to instances-----------charged
+if it instances is not running------------charged
+if system is running with elastic ip--------------no charge
 
