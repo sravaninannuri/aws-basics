@@ -1,0 +1,6 @@
+yum update -y---------------to update system
+yum install httpd---------------to install webserver like apache
+systemctl start httpd---------to start service
+service httpd start---------this is also to start service
+
+if you dont know to put what to choose in security group use custom tcp
