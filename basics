@@ -17,3 +17,10 @@ if it not connected to instances-----------charged
 if it instances is not running------------charged
 if system is running with elastic ip--------------no charge
 
+
+if you want to know system information once you login into system
+---------------------------------------------------------------------
+curl https://169.254.169.254/latest/meta-data/
+curl https://169.254.169.254/latest/user-data -------------bootstrapinformation
+
+
