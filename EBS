@@ -1,0 +1,40 @@
+AMI is a pointer to the snapshot.it does not have anything.it is getting created from the snapshot.8gb is the minium size.
+IGB=3 IOPS
+rOOT VOLUME IS Always EBS volume not ephermial
+lsblk -------------------to list block devices which are connected to insatnces
+df -h ------------------to see file system
+device
+  -partition
+     - filesystem
+     
+volume-----modify volume----we need to increase the partion aswell in ec2 side
+sudo growpart /dev/xvda 1   ------------to grow size of partions as disk
+
+we need to increse the filesystem as well
+----------------------------------------
+sudo yum install xfsprogssudo xfs_growfs -d /
+sudo xfs_growfs -d /-----------for XFS volume
+
+
+ADDING SECOND VOLUME FOR INSTANCES
+-----------------------------------------------
+create voulme --------attach to instance
+create a parttioion
+create a file sytem
+file -s /dev/xvdf  -------------- to see any filesystem is there
+
+mkfs -t xfs /dev/xvdf--------------to create a file system
+sudo mkdir /data ----------------------to add the mountpoint
+sudo mount /dev/xvdf /data ------------------to add the mountpoint
+
+do partion
+-------------------------
+fdisk /dev/xvdf
+n
+w
+mkfs -t ext4 /dev/xvdf
+mkdir newdir
+mount /dev/xvdf /tmp/disk2
+
+
+     
