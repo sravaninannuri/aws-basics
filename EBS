@@ -29,7 +29,7 @@ sudo mount /dev/xvdf /data ------------------to add the mountpoint
 
 do partion
 -------------------------
-fdisk /dev/xvdf
+fdisk /dev/xvdf-----------------to do partition
 n
 w
 mkfs -t ext4 /dev/xvdf
