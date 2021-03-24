@@ -36,5 +36,10 @@ mkfs -t ext4 /dev/xvdf
 mkdir newdir
 mount /dev/xvdf /tmp/disk2
 
+edit /etc/fstab and mention the mounts there
+
+check /etc/fstab defaults in google
+
+
 
      
