@@ -1,0 +1,6 @@
+load can be anything coming from outside or between from instances to database(inside as well)
+loadbalancer sit infront of instances.
+ELB IS A SERVICE
+ELB IS A REGIONBASED. IT IS A INSIDE REGION IT WILL SEND TRAFFIC ACROSS availbility zones.
+it will support certain protocols http,https, and tcp ,ip and ecs endpoints.
+
