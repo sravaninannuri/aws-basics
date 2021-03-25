@@ -41,5 +41,70 @@ edit /etc/fstab and mention the mounts there
 check /etc/fstab defaults in google
 
 
+LVM------------LOGICAL VOLUME MANAGER
+------------------------------------------------
+TAKE 3 DISKS OF EACH SIZE OF 5 6 7 GB
+NOW WE ARE COMBINING ALL 3 DISKS TO WORK AS A SINGLE DISK
+
+LSBLK
+lvmdiskscan------------toknow all disk in instances
+pvcreate /dev/xvdb /dev/xvdc /dev/xvdc------------------do pvcreate on each individual disk
+pvdisplay
+
+vgcreate volumegroupname /dev/xvdf /dev/xvdc -----volumegroupname could be anything-awstraining
+vgdisplay
+lvcreate help
+
+lvcreate -L 2G-n awslvo1 awstraining------------like fdisk
+here -L to give size of disk
+     -n is name of the parition like c d drive in windows here we are given awslvo1
+
+lvdisplay-------------- logical volume displAY-------IT WILL DISPALY WHAT ARE LOGICAL VOLUMES ARE THERE
+vgdisplay-------------VOLUME GROUP DISPLAY---TO KNOW HOW MUCH VOLUME USED AND HOW MUCH LEFT
+pvdisplay=======PHYSICAL VOLUME DISPALY
+
+THEN CRWEATE A FILE SYSTEM ON TOP OF LOGICAL VOLUME DISPALY
+THEN MOUNT THEM
+
+
+
+1. lsblk tom listdown the drives
+2.pvcreate to create the physical voleme
+3.vgcreate for creating volume group using /dev/xvdb and /dev/xvdc
+4. lvcreate for creating logical volume 2gb and 8gb
+5.craete filesytem using mkfs.ext4
+6.create folder and mount them
+7.add additional disk to volume group
+8.extend the LV
+9.use Resize2fs in orderto display the increased voulme.
+
+
+vgext --help
+vgextened awstraining /dev/xvdd
+lvextend -L +2gb name of the volumelvcreateofvolume
+resize2fs voulmename
+
+to delete
+----------------------
+1.first unmount them
+2.delete lvremove
+3.delete vgremove
+4.delete pvremove
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
      
